@@ -48,16 +48,14 @@ Ext.define('Tualo.easymde.form.field.EasyMDE', {
         this.easymde.codemirror.on("change", this.onDidChangeContent.bind(this) );
     },
     onDestroy: function(){
-        this.monacoeditor.dispose();
+        this.easymde.dispose();
         this.callParent();
     },
     onResize: function(w,h){
         this.callParent(arguments);
-        console.log(this.$className, 'onResize', this, arguments);
         this.easymde.codeeditor.setSize(w,h);
     },
     onDidChangeContent: function(event){
-        console.log(this.$className,'onDidChangeContent',event,this.monacoeditor.getValue());
         this.setValue( this.easymde.value() ); 
     },
     
@@ -66,7 +64,7 @@ Ext.define('Tualo.easymde.form.field.EasyMDE', {
         this.callParent([value]);
         if (typeof this.easymde!='undefined'){
             if (this.easymde.value()!=value){
-                this.easymde.codemirror.setValue(value);
+                this.easymde.value(value);
             }
         }
     },

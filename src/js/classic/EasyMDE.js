@@ -44,6 +44,7 @@ Ext.define('Tualo.easymde.form.field.EasyMDE', {
 
         this.easymde = new EasyMDE({
             element: document.getElementById(this.id+'-inputEl'),
+            autoDownloadFontAwesome: false
         });
         this.easymde.codemirror.on("change", this.onDidChangeContent.bind(this) );
     },

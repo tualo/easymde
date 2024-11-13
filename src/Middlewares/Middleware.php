@@ -8,7 +8,7 @@ class Middleware implements IMiddleware{
     public static function register(){
         TualoApplication::use('easymde',function(){
             try{
-                TualoApplication::javascript('easymde_loader', './easymdelib/easymde.min.js',[],-10000);
+                // TualoApplication::javascript('easymde_loader', './easymdelib/easymde.min.js',[],-10000);
                 TualoApplication::stylesheet( './easymdelib/easymde.min.css',10000);
             }catch(\Exception $e){
                 TualoApplication::set('maintanceMode','on');

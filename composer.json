@@ -1,20 +1,23 @@
 {
-    "name": "tualo/easymde",
-    "description": "Easy Markdown Editor for tualo office",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Thomas Hoffmann",
-            "email": "thomas.hoffmann@tualo.de"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Tualo\\Office\\EasyMDE\\": "src/"
-        },
-        "files": ["src/functions.php"]
+  "name": "tualo/easymde",
+  "description": "Easy Markdown Editor for tualo office",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Thomas Hoffmann",
+      "email": "thomas.hoffmann@tualo.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Tualo\\Office\\EasyMDE\\": "src/"
     },
-    "minimum-stability": "dev",
-    "require": {}
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "require": {},
+  "version": "1.0.1"
 }
